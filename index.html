@@ -7,7 +7,7 @@
   <title>Aguante Rock!</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
@@ -15,15 +15,18 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">Rock!</a>
+      <a class="navbar-brand fs-1">Aguante Rock!</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#intro">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#bands">Bandas</a></li>
-          <li class="nav-item"><a class="nav-link" href="#community">Unete</a></li>
+          <li class="nav-item"><a class="ms-3 nav-link me-3" href="#intro">Inicio</a></li>
+          <li class="nav-item"><a class="ms-3 nav-link me-3" href="#bands">Bandas</a></li>
+          <li class="nav-item"><a class="ms-3 nav-link me-3" href="#top-bands">Top Bandas</a></li>
+          <li class="nav-item"><a class="ms-3 nav-link me-3" href="#albums-60-70">Álbumes</a></li>
+          <li class="nav-item"><a class="ms-3 nav-link me-3" href="#top-albums">Top Álbumes</a></li>
+          <li class="nav-item"><a class="ms-3 nav-link me-3" href="#community">Únete</a></li>
         </ul>
       </div>
     </div>
@@ -32,18 +35,26 @@
   <main>
     <!-- Introducción -->
     <section id="intro" class="py-5 text-center text-light bg-dark">
-      <div class="container">
-        <h1>Aguante Rock !!!</h1>
-        <p>Descubre las bandas que marcaron una década inolvidable en la música argentina.</p>
+      <div class="containerbg">
+        <div class="container">
+          <h1 class="fs-1">Bienvenido a AguanteRock!</h1>
+          <p class="fs-3 fw-lighter">Sitio cultural musical</p>
+
+          <p class="fs-4 fw-lighte">Descubre las bandas que marcaron una década inolvidable en la música argentina.</p>
+          <br>
+          <button type="button" class="btn fs-3 custom-button" style="border-radius: 30px;">Descubrir</button>
+        </div>
       </div>
     </section>
 
-    <!-- Bandas icónicas -->
-    <section id="bands" class="py-5">
 
-      <div class="container my-5">
+    <!-- Bandas icónicas -->
+    <section id="bands" class="py-5 ">
+
+      <div class="container my-5 contenedorcarusel">
         <h2 class="text-center mb-4">Bandas Icónicas de Todos los Tiempos</h2>
-        <div id="bandsCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <div id="bandsCarousel" class="carousel carousel-dark slid slide bandsCarousel" data-bs-ride="carousel">
           <div class="carousel-inner">
 
             <!-- Grupo 1 -->
@@ -52,30 +63,30 @@
                 <div class="col-md-4 text-center">
                   <img
                     src="https://images.seeklogo.com/logo-png/12/1/soda-stereo-me-veras-volver-v2-logo-png_seeklogo-128811.png?v=638670875940000000"
-                    class="d-block mx-auto img-fluid" alt="Soda Stereo" style="max-height: 200px;">
+                    class="d-block mx-auto rounded mx-auto d-block" alt="Soda Stereo" style="max-height: 200px;">
                   <h3 class="mt-3">Soda Stereo</h3>
                   <h5>1982 - 1997</h5>
                   <h5>Buenos Aires, Argentina</h5>
                   <p>Liderada por Gustavo Cerati, redefinió el rock latinoamericano.</p>
-                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="SodaStereo">
+                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="Soda Stereo">
                     <i class="bi bi-heart"></i> Recomendar
                   </button>
                 </div>
                 <div class="col-md-4 text-center">
                   <img src="https://i.scdn.co/image/ab6761610000e5eb78f40b5153bfcbd5e7a55432"
-                    class="d-block mx-auto img-fluid" alt="Patricio Rey y sus Redonditos de Ricota"
+                    class="d-block mx-auto rounded mx-auto d-block alt=" Patricio Rey y sus Redonditos de Ricota"
                     style="max-height: 200px;">
                   <h3 class="mt-3">Patricio Rey y sus Redonditos de Ricota</h3>
                   <h5>1976 - 2001</h5>
                   <h5>La Plata, Argentina</h5>
                   <p>Con un estilo único, íconos del rock nacional.</p>
-                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="LosRedondos"><i
-                      class="bi bi-heart"></i> Recomendar</button>
+                  <button class="btn btn-outline-danger btn-sm vote-btn"
+                    data-id="Patricio Rey y sus Redonditos de Ricota"><i class="bi bi-heart"></i> Recomendar</button>
                 </div>
                 <div class="col-md-4 text-center">
                   <img
                     src="https://d22fxaf9t8d39k.cloudfront.net/f5c2dbf470788b14e39ba74b578a505b41b2bfa2d946f38b6fee99347502473620700.png"
-                    class="d-block mx-auto img-fluid" alt="Virus" style="max-height: 200px;">
+                    class="d-block mx-auto rounded mx-auto d-block" alt="Virus" style="max-height: 200px;">
                   <h3 class="mt-3">Virus</h3>
                   <h5>1980 - presente</h5>
                   <h5>La Plata, Argentina</h5>
@@ -92,33 +103,35 @@
               <div class="row">
                 <div class="col-md-4 text-center">
                   <img src="https://www.eventworld.co/blob/images/pg/los-abuelos-de-la-nada_6e088_1000.jpg"
-                    class="d-block mx-auto img-fluid" lt="Los Abuelos de la Nada" style="max-height: 200px;">
+                    class="d-block mx-auto rounded mx-auto d-block" alt="Los Abuelos de la Nada"
+                    style="max-height: 200px;">
                   <h3 class="mt-3">Los Abuelos de la Nada</h3>
                   <h5>1982 - 1993</h5>
                   <h5>Buenos Aires, Argentina</h5>
-                  <p>Una de las bandas más influyentes de la historia del rock argentino, con la voz icónica de Miguel Abuelo.</p>
-                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="LosAbuelosdelaNada">
+                  <p>Una de las bandas más influyentes de la historia del rock argentino, con la voz icónica de Miguel
+                    Abuelo.</p>
+                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="Los Abuelos de la Nada">
                     <i class="bi bi-heart"></i> Recomendar</button>
                 </div>
                 <div class="col-md-4 text-center">
                   <img src="https://i.pinimg.com/280x280_RS/06/42/c6/0642c6340cc5cbebf4ebdc172c7f35f4.jpg"
-                    class="d-block mx-auto img-fluid" alt="Charly García" style="max-height: 200px;">
+                    class="d-block mx-auto rounded mx-auto d-block" alt="Charly García" style="max-height: 200px;">
                   <h3 class="mt-3">Charly García</h3>
                   <h4>1967 - presente</h4>
                   <h4>Buenos Aires, Argentina</h4>
                   <p>Pionero del rock argentino con trayectoria legendaria.</p>
-                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="CharlyGarcia">
+                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="Charly García">
                     <i class="bi bi-heart"></i> Recomendar</button>
                 </div>
                 <div class="col-md-4 text-center">
                   <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKUMJfsj_yIS3CTKhQcgEM4KLipPQRSF2m1TvaQfU92BhjvtNW-WG8rCeJmR9cfA2Lub4&usqp=CAU"
-                    class="d-block mx-auto img-fluid" alt="Pappo's Blues" style="max-height: 200px;">
+                    class="d-block mx-auto rounded mx-auto d-block" alt="Pappo's Blues" style="max-height: 200px;">
                   <h3 class="mt-3">Pappo's Blues</h3>
                   <h5>1970 - 1972</h5>
                   <h5>Buenos Aires, Argentina</h5>
                   <p>Ícono del blues y rock pesado argentino.</p>
-                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="PapposBlues">
+                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="Pappo's Blues">
                     <i class="bi bi-heart"></i> Recomendar</button>
                 </div>
               </div>
@@ -129,14 +142,14 @@
               <div class="row">
 
                 <div class="col-12 col-md-4 text-center">
-                  <img src="https://www.gustore.cl/img/estampados/9404/9404.png" class="d-block mx-auto img-fluid"
-                    alt="Pescado Rabioso" style="max-height: 200px;">
+                  <img src="https://www.gustore.cl/img/estampados/9404/9404.png"
+                    class="d-block mx-auto rounded mx-auto d-block" alt="Pescado Rabioso" style="max-height: 200px;">
                   <h3 class="mt-3">Pescado Rabioso</h3>
                   <h5>1971 - 1972</h5>
                   <h5>Buenos Aires, Argentina</h5>
                   <p>Liderada por Luis Alberto Spinetta, marcó un hito en el rock argentino con su propuesta
                     experimental y poética.</p>
-                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="PescadoRabioso"><i
+                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="Pescado Rabioso"><i
                       class="bi bi-heart"></i> Recomendar</button>
                 </div>
 
@@ -147,8 +160,10 @@
                   <h3 class="mt-3">Serú Girán</h3>
                   <h5>1978 - 1982</h5>
                   <h5>Buenos Aires, Argentina</h5>
-                  <p>Serú Girán se consolidó como una banda emblemática del rock progresivo, fusionando música compleja con letras profundas.</p>
-                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="SeruGiran"><i class="bi bi-heart"></i>
+                  <p>Serú Girán se consolidó como una banda emblemática del rock progresivo, fusionando música compleja
+                    con letras profundas.</p>
+                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="Serú Girán"><i
+                      class="bi bi-heart"></i>
                     Recomendar</button>
                 </div>
 
@@ -158,8 +173,9 @@
                   <h3 class="mt-3">La Máquina de Hacer Pájaros</h3>
                   <h5>1975 - 1977</h5>
                   <h5>Buenos Aires, Argentina</h5>
-                  <p>La banda fue un experimento musical que fusionó rock progresivo con una propuesta más experimental.</p>
-                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="LaMaquinadeHacerPajaros"><i
+                  <p>La banda fue un experimento musical que fusionó rock progresivo con una propuesta más experimental.
+                  </p>
+                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="La Máquina de Hacer Pájaros"><i
                       class="bi bi-heart"></i> Recomendar</button>
                 </div>
 
@@ -172,33 +188,37 @@
 
                 <div class="col-12 col-md-4 text-center">
                   <img src="https://i.pinimg.com/originals/55/60/ee/5560eec10929dff787f28db6628e824e.jpg"
-                    class="d-block mx-auto img-fluid" alt="Divididos" style="max-height: 200px;">
+                    class="d-block mx-auto rounded mx-auto d-block" alt="Divididos" style="max-height: 200px;">
                   <h3 class="mt-3">Divididos</h3>
                   <h5>1988 - presente</h5>
                   <h5>Hurlingham, Argentina</h5>
-                  <p>"La aplanadora del rock", La bandas más importantes del contemporáneo, fusionando rock, reggae y el blues.</p>
+                  <p>"La aplanadora del rock", La bandas más importantes del contemporáneo, fusionando rock, reggae y el
+                    blues.</p>
                   <button class="btn btn-outline-danger btn-sm vote-btn" data-id="Divididos"><i class="bi bi-heart"></i>
                     Recomendar</button>
                 </div>
 
                 <div class="col-12 col-md-4 text-center">
                   <img src="https://http2.mlstatic.com/D_NQ_NP_806136-MLU75210775244_032024-O.webp"
-                    class="d-block mx-auto img-fluid" alt="Almendra" style="max-height: 200px;">
+                    class="d-block mx-auto rounded mx-auto d-block" alt="Almendra" style="max-height: 200px;">
                   <h3 class="mt-3">Almendra</h3>
                   <h5>1967 - 1970</h5>
                   <h5>Buenos Aires, Argentina</h5>
-                  <p>Con La participación de Spinetta, Almendra marcó el inicio del rock nacional un estilo único y letras poéticas.</p>
-                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="Almendra"><i class="bi bi-heart"></i> Recomendar</button>
+                  <p>Con La participación de Spinetta, Almendra marcó el inicio del rock nacional un estilo único y
+                    letras poéticas.</p>
+                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="Almendra"><i class="bi bi-heart"></i>
+                    Recomendar</button>
                 </div>
 
                 <div class="col-12 col-md-4 text-center">
                   <img src="https://cloudfront-us-east-1.images.arcpublishing.com/copesa/SPKUUXREWNEAVDCVTFANOWTJAQ.jpg"
-                    class="d-block mx-auto img-fluid" alt="Gustavo Cerati" style="max-height: 200px;">
+                    class="d-block mx-auto rounded mx-auto d-block" alt="Gustavo Cerati" style="max-height: 200px;">
                   <h3 class="mt-3">Gustavo Cerati</h3>
                   <h4>1981 - 2010</h4>
                   <h4>Buenos Aires, Argentina</h4>
-                  <p>Considerado la figura más grandes del rock latinoamericano, Cerati dejó un legado imborrable con su música y lírica profunda</p>
-                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="GustavoCerati">
+                  <p>Considerado la figura más grandes del rock latinoamericano, Cerati dejó un legado imborrable con su
+                    música y lírica profunda</p>
+                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="Gustavo Cerati">
                     <i class="bi bi-heart"></i> Recomendar
                   </button>
                 </div>
@@ -214,12 +234,14 @@
                 <div class="col-12 col-md-4 text-center">
                   <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt39CO8avIN7Ivwf6zKdJz_i6ubTGg0AgYpaueuMnRrVwP8-btqPXFNlrJUtO0QZeQO6U&usqp=CAU"
-                    class="d-block mx-auto img-fluid" alt="Babasónicos" style="max-height: 200px;">
+                    class="d-block mx-auto rounded mx-auto d-block" alt="Babasónicos" style="max-height: 200px;">
                   <h3 class="mt-3">Babasónicos</h3>
                   <h5>1991 - Presente</h5>
                   <h5>Lanús, Argentina</h5>
-                  <p>Babasónicos exploran diversos géneros, desde el rock experimental hasta el pop electrónico, con un estilo vanguardista y provocador.</p>
-                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="Babasónicos"><i class="bi bi-heart"></i> Recomendar</button>
+                  <p>Babasónicos exploran diversos géneros, desde el rock experimental hasta el pop electrónico, con un
+                    estilo vanguardista y provocador.</p>
+                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="Babasónicos"><i
+                      class="bi bi-heart"></i> Recomendar</button>
                 </div>
 
                 <div class="col-12 col-md-4 text-center">
@@ -229,20 +251,24 @@
                   <h3 class="mt-3">Luis Alberto Spinetta</h3>
                   <h4>1966 - 2012</h4>
                   <h4>Buenos Aires, Argentina</h4>
-                  <p>Considerado uno de los artistas más influyentes y fundamental del rock en español, Spinetta formó parte de las mas icónicas bandas de rock argentino. Su legado abarca géneros como el rock, el jazz y la música experimental.</p>
-                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="LuisAlbertoSpinetta"><i class="bi bi-heart"></i>
+                  <p>Considerado uno de los artistas más influyentes y fundamental del rock en español, Spinetta formó
+                    parte de las mas icónicas bandas de rock argentino. Su legado abarca géneros como el rock, el jazz y
+                    la música experimental.</p>
+                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="Luis Alberto Spinetta"><i
+                      class="bi bi-heart"></i>
                     Recomendar</button>
                 </div>
 
 
                 <div class="col-12 col-md-4 text-center">
                   <img src="https://i.scdn.co/image/ab67616d00001e02b0d1c87efa46ace967ee228b"
-                    class="d-block mx-auto img-fluid" alt="Andrés Calamaro" style="max-height: 200px;">
+                    class="d-block mx-auto rounded mx-auto d-block" alt="Andrés Calamaro" style="max-height: 200px;">
                   <h3 class="mt-3">Andrés Calamaro</h3>
                   <h4>1977 - Presente</h4>
                   <h4>Buenos Aires, Argentina</h4>
-                  <p>Andrés Calamaro es un miembro importante de parte de la historia del rock argentino. Con una mezcla de rock, tango, y música latina.</p>
-                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="AndresCalamaro"><i
+                  <p>Andrés Calamaro es un miembro importante de parte de la historia del rock argentino. Con una mezcla
+                    de rock, tango, y música latina.</p>
+                  <button class="btn btn-outline-danger btn-sm vote-btn" data-id="Andrés Calamaro"><i
                       class="bi bi-heart"></i> Recomendar</button>
                 </div>
 
@@ -282,531 +308,545 @@
     </section>
 
     <section id="albums-60-70" class="py-5 bg-light">
+
+      <div class="albumes70">
+        <div class="container my-5">
+
+          <h2 class="text-center mb-4">Álbumes Icónicos de 70's</h2>
+          <div class="row albumes70">
+
+            <!-- Álbum 1: Almendra -->
+            <div class="col-md-4 text-center">
+              <img src="https://i.scdn.co/image/ab67616d0000b273ccf6d7a68e129185513921e8"
+                class="d-block mx-auto rounded mx-auto d-block" alt="artaud_1973" style="max-height: 200px;">
+              <h3 class="mt-3">Almendra</h3>
+              <h5>1969</h5>
+              <p><strong>Banda:</strong> Almendra</p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item music-item" data-src="audio/ColorHumano.mp3"> 2. Color Humano</li>
+                <li class="list-group-item music-item" data-src="audio/AEstosHombresTristes.mp3">7. A Estos Hombres
+                  Tristes</li>
+                <li class="list-group-item music-item" data-src="audio/MuchachaOjosdePapel.mp3">1. Muchacha (Ojos de
+                  Papel)</li>
+              </ul>
+              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Almendra (1969)">
+                <i class="bi bi-heart"></i> Recomendar
+              </button>
+            </div>
+
+            <!-- Álbum 2: Artaud -->
+            <div class="col-md-4 text-center">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Pescado_Rabioso-Spinetta_-_Artaud.png"
+                class="d-block mx-auto rounded mx-auto d-block" alt="artaud_1973" style="max-height: 200px;">
+              <h3 class="mt-3">Artaud</h3>
+              <h5>1973</h5>
+              <p><strong>Banda:</strong> Pescado Rabioso</p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item music-item" data-src="audio/Bajan.mp3">7. Bajan</li>
+                <li class="list-group-item music-item" data-src="audio/CementerioClub.mp3">2. Cementerio Club</li>
+                <li class="list-group-item music-item" data-src="audio/LasHabladuriasdelMundo.mp3">9. Las Habladurias
+                  del
+                  Mundo</li>
+              </ul>
+              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Artaud (1973)">
+                <i class="bi bi-heart"></i> Recomendar
+              </button>
+            </div>
+
+            <!-- Álbum 3: Pescado 2 -->
+            <div class="col-md-4 text-center">
+              <img src="https://i.scdn.co/image/ab67616d0000b273714844f9b7c64a47b5bd2c93"
+                class="d-block mx-auto rounded mx-auto d-block" alt="pescado2_1973" style="max-height: 200px;">
+              <h3 class="mt-3">Pescado 2</h3>
+              <h5>1973</h5>
+              <p><strong>Banda:</strong> Pescado Rabioso</p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item music-item" data-src="audio/AguasClarasdeOlimpos.mp3">18. Aguas Claras de
+                  Olimpos</li>
+                <li class="list-group-item music-item" data-src="audio/ComoelVientoVoyaVer.mp3">4. Como el Viento Voy a
+                  Ver</li>
+                <li class="list-group-item music-item" data-src="audio/MiEspirituSeFue.mp3">14. Mi Espíritu Se Fue</li>
+              </ul>
+              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Pescado 2 (1973)">
+                <i class="bi bi-heart"></i> Recomendar
+              </button>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <!-- Álbum 4: La Grasa de las Capitales -->
+            <div class="col-md-4 text-center">
+              <img src="https://i.scdn.co/image/ab67616d0000b273d9172a63ab39eae0bcafcb14"
+                class="d-block mx-auto rounded mx-auto d-block" alt="grasa_capitales_1979" style="max-height: 200px;">
+              <h3 class="mt-3">La Grasa de las Capitales</h3>
+              <h5>1979</h5>
+              <p><strong>Banda:</strong> Serú Girán</p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item music-item" data-src="audio/LaGrasadelasCapitales.mp3">1. La Grasa de las
+                  Capitales</li>
+                <li class="list-group-item music-item" data-src="audio/Viernes3AM.mp3">5. Viernes 3 A.M.</li>
+                <li class="list-group-item music-item" data-src="audio/PerroAndaluz.mp3">3. Perro Andaluz</li>
+              </ul>
+              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="La Grasa de las Capitales (1979)">
+                <i class="bi bi-heart"></i> Recomendar
+              </button>
+            </div>
+
+            <!-- Álbum 5: Almendra II -->
+            <div class="col-md-4 text-center">
+              <img src="https://i.scdn.co/image/ab67616d0000b273f779fcdfbc84392b90c517e6"
+                class="d-block mx-auto rounded mx-auto d-block" alt="almendra2_1970" style="max-height: 200px;">
+              <h3 class="mt-3">Almendra II</h3>
+              <h5>1970</h5>
+              <p><strong>Banda:</strong> Almendra</p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item music-item" data-src="audio/Tomaeltrenhaciaelsur.mp3">1. Toma el tren hacia
+                  el
+                  sur</li>
+                <li class="list-group-item music-item" data-src="audio/RutasArgentinas.mp3">5. Rutas Argentinas</li>
+                <li class="list-group-item music-item" data-src="audio/Parvas.mp3">11. Parvas</li>
+              </ul>
+              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Almendra II (1970)">
+                <i class="bi bi-heart"></i> Recomendar
+              </button>
+            </div>
+
+            <!-- Álbum 6: Pappo's Blues Volumen 2 -->
+            <div class="col-md-4 text-center">
+              <img
+                src="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/fb/7c/dd/fb7cddaf-75e6-60e7-dbb3-0c53ad49587f/9c704026-8c0e-46f4-8100-62f4ba51a8c1.jpg/600x600bf-60.jpg"
+                class="d-block mx-auto rounded mx-auto d-block" alt="pappo_vol2_1972" style="max-height: 200px;">
+              <h3 class="mt-3">Pappo's Blues Volumen 2</h3>
+              <h5>1972</h5>
+              <p><strong>Banda:</strong> Pappo's Blues</p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item music-item" data-src="audio/Llegaralapaz.mp3">2. Llegará la paz</li>
+                <li class="list-group-item music-item" data-src="audio/PobreJuan.mp3">6. Pobre Juan</li>
+                <li class="list-group-item music-item" data-src="audio/Insoluble.mp3">3. Insoluble</li>
+              </ul>
+              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Pappo's Blues Volumen 2 (1972)">
+                <i class="bi bi-heart"></i> Recomendar
+              </button>
+            </div>
+          </div>
+
+
+          <div class="row mt-4">
+            <!-- Álbum 7: Pappo's Blues Volumen 3 -->
+            <div class="col-md-4 text-center">
+              <img src="https://i.scdn.co/image/ab67616d0000b2733b22594a371efef222af9f46"
+                class="d-block mx-auto rounded mx-auto d-block" alt="pappo_vol3_1973" style="max-height: 200px;">
+              <h3 class="mt-3">Pappo's Blues Volumen 3</h3>
+              <h5>1973</h5>
+              <p><strong>Banda:</strong> Pappo's Blues</p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item music-item" data-src="audio/SucioyDesprolijo.mp3">3. Sucio y Desprolijo</li>
+                <li class="list-group-item music-item" data-src="audio/SiempreEsLoMismoNena.mp3">9. Siempre Es Lo Mismo
+                  Nena.</li>
+                <li class="list-group-item music-item" data-src="audio/PajaroMetalico.mp3">2. Pájaro Metálico</li>
+              </ul>
+              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Pappo's Blues Volumen 3 (1973)">
+                <i class="bi bi-heart"></i> Recomendar
+              </button>
+            </div>
+
+            <!-- Álbum 8: Invisible -->
+            <div class="col-md-4 text-center">
+              <img src="https://i.scdn.co/image/ab67616d0000b273231d1ef9748365f09e4afcb8"
+                class="d-block mx-auto rounded mx-auto d-block" alt="invisible_1974" style="max-height: 200px;">
+              <h3 class="mt-3">Invisible</h3>
+              <h5>1974</h5>
+              <p><strong>Banda:</strong> Invisible</p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item music-item" data-src="audio/Suspension.mp3">3. Suspensión</li>
+                <li class="list-group-item music-item" data-src="audio/JugodeLucuma.mp3">1. Jugo de Lucuma</li>
+                <li class="list-group-item music-item" data-src="audio/ElDiluvioylaPasajera.mp3">2. El Diluvio y la
+                  Pasajera</li>
+              </ul>
+              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Invisible (1974)">
+                <i class="bi bi-heart"></i> Recomendar
+              </button>
+            </div>
+
+            <!-- Álbum 9: Películas -->
+            <div class="col-md-4 text-center">
+              <img
+                src="https://cdns-images.dzcdn.net/images/cover/049c4a5073814b8c3ce6204789ce710f/0x1900-000000-80-0-0.jpg"
+                class="d-block mx-auto rounded mx-auto d-block" alt="peliculas_1977" style="max-height: 200px;">
+              <h3 class="mt-3">Películas</h3>
+              <h5>1977</h5>
+              <p><strong>Banda:</strong> La Máquina de Hacer Pájaros</p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item music-item" data-src="audio/Hipercandombe.mp3">5. Hipercandombe</li>
+                <li class="list-group-item music-item" data-src="audio/QueSePuedeHacerSalvoVerPeliculas.mp3">4. Que Se
+                  Puede Hacer Salvo Ver Peliculas</li>
+                <li class="list-group-item music-item" data-src="audio/NoTeDejesDesanimar.mp3">3. No Te Dejes Desanimar
+                </li>
+              </ul>
+              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Películas (1977)">
+                <i class="bi bi-heart"></i> Recomendar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="albumes80"></div>
       <div class="container my-5">
-        <h2 class="text-center mb-4">Álbumes Icónicos de 70's</h2>
+
+        <h2 class="text-center mb-4">Álbumes Icónicos de los 80's</h2>
+
         <div class="row">
 
-          <!-- Álbum 1: Almendra -->
+          <!-- Álbum 1: Relax -->
           <div class="col-md-4 text-center">
-            <img src="https://i.scdn.co/image/ab67616d0000b273ccf6d7a68e129185513921e8"
-              class="d-block mx-auto img-fluid" alt="artaud_1973" style="max-height: 200px;">
-            <h3 class="mt-3">Almendra</h3>
-            <h5>1969</h5>
-            <p><strong>Banda:</strong> Almendra</p>
+            <img src="https://i.scdn.co/image/ab67616d0000b273302374afec1da59ce59da8f0"
+              class="d-block mx-auto rounded mx-auto d-block" alt="relax_1984" style="max-height: 200px;">
+            <h3 class="mt-3">Relax</h3>
+            <h5>1984</h5>
+            <p><strong>Banda:</strong> Virus</p>
             <ul class="list-group mb-3">
-              <li class="list-group-item music-item" data-src="audio/ColorHumano.mp3">2. Color Humano</li>
-              <li class="list-group-item music-item" data-src="audio/AEstosHombresTristes.mp3">7. A Estos Hombres
-                Tristes</li>
-              <li class="list-group-item music-item" data-src="audio/MuchachaOjosdePapel.mp3">1. Muchacha (Ojos de
-                Papel)</li>
+              <li class="list-group-item music-item" data-src="audio/AmorDescartable.mp3">5. Amor Descartable</li>
+              <li class="list-group-item music-item" data-src="audio/DameUnaSeñal.mp3">7. Dame Una Señal</li>
+              <li class="list-group-item music-item" data-src="audio/JuegosIncompletos.mp3">6. Juegos Incompletos</li>
             </ul>
-            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="almendra_1969">
+            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Relax (1984)">
               <i class="bi bi-heart"></i> Recomendar
             </button>
           </div>
 
-          <!-- Álbum 2: Artaud -->
+          <!-- Álbum 2: Nada Personal -->
           <div class="col-md-4 text-center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Pescado_Rabioso-Spinetta_-_Artaud.png"
-              class="d-block mx-auto img-fluid" alt="artaud_1973" style="max-height: 200px;">
-            <h3 class="mt-3">Artaud</h3>
-            <h5>1973</h5>
-            <p><strong>Banda:</strong> Pescado Rabioso</p>
+            <img src="https://i.scdn.co/image/ab67616d0000b273e28947f6ad2f100af9c1965a"
+              class="d-block mx-auto rounded mx-auto d-block" alt="nada_personal_1985" style="max-height: 200px;">
+            <h3 class="mt-3">Nada Personal</h3>
+            <h5>1985</h5>
+            <p><strong>Banda:</strong> Soda Stereo</p>
             <ul class="list-group mb-3">
-              <li class="list-group-item music-item" data-src="audio/Bajan.mp3">7. Bajan</li>
-              <li class="list-group-item music-item" data-src="audio/CementerioClub.mp3">2. Cementerio Club</li>
-              <li class="list-group-item music-item" data-src="audio/LasHabladuriasdelMundo.mp3">Las Habladurias del
-                Mundo</li>
+              <li class="list-group-item music-item" data-src="audio/CuandoPaseElTemblo.mp3">3. Cuando Pase El Temblo
+              </li>
+              <li class="list-group-item music-item" data-src="audio/NadaPersonal.mp3">1. Nada Personal</li>
+              <li class="list-group-item music-item" data-src="audio/JuegosDeSeduccion.mp3">6. Juegos De Seducción
+              </li>
+
             </ul>
-            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="artaud_1973">
+            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Nada Personal (1985)">
               <i class="bi bi-heart"></i> Recomendar
             </button>
           </div>
 
-          <!-- Álbum 3: Pescado 2 -->
+          <!-- Álbum 3: Oktubre -->
           <div class="col-md-4 text-center">
-            <img src="https://i.scdn.co/image/ab67616d0000b273714844f9b7c64a47b5bd2c93"
-              class="d-block mx-auto img-fluid" alt="pescado2_1973" style="max-height: 200px;">
-            <h3 class="mt-3">Pescado 2</h3>
-            <h5>1973</h5>
-            <p><strong>Banda:</strong> Pescado Rabioso</p>
+            <img src="https://i.scdn.co/image/ab67616d0000b273353360f871d689ff74dd3712"
+              class="d-block mx-auto rounded mx-auto d-block" alt="oktubre_1986" style="max-height: 200px;">
+            <h3 class="mt-3">Oktubre</h3>
+            <h5>1986</h5>
+            <p><strong>Banda:</strong> Patricio Rey y sus Redonditos de Ricota</p>
             <ul class="list-group mb-3">
-              <li class="list-group-item music-item" data-src="audio/AguasClarasdeOlimpos.mp3">18. Aguas Claras de
-                Olimpos</li>
-              <li class="list-group-item music-item" data-src="audio/ComoelVientoVoyaVer.mp3">4. Como el Viento Voy a
-                Ver</li>
-              <li class="list-group-item music-item" data-src="audio/MiEspirituSeFue.mp3">14. Mi Espíritu Se Fue</li>
+              <li class="list-group-item music-item" data-src="audio/PresoEnMiCiudad.mp3">2. Preso En Mi Ciudad</li>
+              <li class="list-group-item music-item" data-src="audio/FuegosDeOktober.mp3">1. Fuegos De Oktober</li>
+              <li class="list-group-item music-item" data-src="audio/JiJiJi.mp3">7. Ji Ji Ji</li>
             </ul>
-            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="pescado2_1973">
+            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Oktubre (1986)">
               <i class="bi bi-heart"></i> Recomendar
             </button>
           </div>
+
         </div>
 
         <div class="row mt-4">
-          <!-- Álbum 4: La Grasa de las Capitales -->
+          <!-- Álbum 4: Clics Modernos -->
           <div class="col-md-4 text-center">
-            <img src="https://i.scdn.co/image/ab67616d0000b273d9172a63ab39eae0bcafcb14"
-              class="d-block mx-auto img-fluid" alt="grasa_capitales_1979" style="max-height: 200px;">
-            <h3 class="mt-3">La Grasa de las Capitales</h3>
-            <h5>1979</h5>
-            <p><strong>Banda:</strong> Serú Girán</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Clics_modernos.jpg"
+              class="d-block mx-auto rounded mx-auto d-block" alt="clics_modernos_1983" style="max-height: 200px;">
+            <h3 class="mt-3">Clics Modernos</h3>
+            <h5>1983</h5>
+            <p><strong>Banda:</strong> Charly García</p>
             <ul class="list-group mb-3">
-              <li class="list-group-item music-item" data-src="audio/LaGrasadelasCapitales.mp3">1. La Grasa de las
-                Capitales</li>
-              <li class="list-group-item music-item" data-src="audio/Viernes3AM.mp3">5. Viernes 3 A.M.</li>
-              <li class="list-group-item music-item" data-src="audio/PerroAndaluz.mp3">3. Perro Andaluz</li>
+              <li class="list-group-item music-item" data-src="audio/NosSiguenPegandoAbajo.mp3">1. Nos Siguen Pegando
+                Abajo</li>
+              <li class="list-group-item music-item" data-src="audio/NoMeDejanSalir.mp3">6. No Me Dejan Salir</li>
+              <li class="list-group-item music-item" data-src="audio/LosDinosaurios.mp3">7. Los Dinosaurios</li>
             </ul>
-            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="grasa_capitales_1979">
+            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="cClics Modernos (1983)">
               <i class="bi bi-heart"></i> Recomendar
             </button>
           </div>
 
-          <!-- Álbum 5: Almendra II -->
+          <!-- Álbum 5: Signos -->
           <div class="col-md-4 text-center">
-            <img src="https://i.scdn.co/image/ab67616d0000b273f779fcdfbc84392b90c517e6"
-              class="d-block mx-auto img-fluid" alt="almendra2_1970" style="max-height: 200px;">
-            <h3 class="mt-3">Almendra II</h3>
-            <h5>1970</h5>
-            <p><strong>Banda:</strong> Almendra</p>
+            <img src="https://i.scdn.co/image/ab67616d0000b2734a6f5598c41e77ae78cab725"
+              class="d-block mx-auto rounded mx-auto d-block" alt="signos_1986" style="max-height: 200px;">
+            <h3 class="mt-3">Signos</h3>
+            <h5>1986</h5>
+            <p><strong>Banda:</strong> Soda Stereo</p>
             <ul class="list-group mb-3">
-              <li class="list-group-item music-item" data-src="audio/Tomaeltrenhaciaelsur.mp3">1. Toma el tren hacia el
-                sur</li>
-              <li class="list-group-item music-item" data-src="audio/RutasArgentinas.mp3">5. Rutas Argentinas</li>
-              <li class="list-group-item music-item" data-src="audio/Parvas.mp3">11. Parvas</li>
+              <li class="list-group-item music-item" data-src="audio/PersianaAmericana.mp3">5. Persiana Americana</li>
+              <li class="list-group-item music-item" data-src="audio/Signos.mp3">7. Signos</li>
+              <li class="list-group-item music-item" data-src="audio/Profugos.mp3">3. Prófugos</li>
+
             </ul>
-            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="almendra2_1970">
+            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Signos (1986)">
               <i class="bi bi-heart"></i> Recomendar
             </button>
           </div>
 
-          <!-- Álbum 6: Pappo's Blues Volumen 2 -->
+
+          <!-- Álbum 6: Vasos y besos -->
           <div class="col-md-4 text-center">
-            <img
-              src="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/fb/7c/dd/fb7cddaf-75e6-60e7-dbb3-0c53ad49587f/9c704026-8c0e-46f4-8100-62f4ba51a8c1.jpg/600x600bf-60.jpg"
-              class="d-block mx-auto img-fluid" alt="pappo_vol2_1972" style="max-height: 200px;">
-            <h3 class="mt-3">Pappo's Blues Volumen 2</h3>
-            <h5>1972</h5>
-            <p><strong>Banda:</strong> Pappo's Blues</p>
+            <img src="https://i.scdn.co/image/ab67616d0000b273b48a6d969c6bb667e24929a5"
+              class="d-block mx-auto rounded mx-auto d-block" alt="vasos_y_besos_1983" style="max-height: 200px;">
+            <h3 class="mt-3">Vasos y besos</h3>
+            <h5>1986</h5>
+            <p><strong>Banda:</strong> Los Abuelos De La Nada</p>
             <ul class="list-group mb-3">
-              <li class="list-group-item music-item" data-src="audio/Llegaralapaz.mp3">2. Llegará la paz</li>
-              <li class="list-group-item music-item" data-src="audio/PobreJuan.mp3">6. Pobre Juan</li>
-              <li class="list-group-item music-item" data-src="audio/Insoluble.mp3">3. Insoluble</li>
+              <li class="list-group-item music-item" data-src="audio/Milhoras.mp3">8. Mil horas</li>
+              <li class="list-group-item music-item" data-src="audio/LunesPorLaMadrugada.mp3">1. Lunes Por La
+                Madrugada</li>
+              <li class="list-group-item music-item" data-src="audio/HimnoDeMiCorazon.mp3">6. Himno De Mi Corazón</li>
+
             </ul>
-            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="pappo_vol2_1972">
+            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Vasos y besos (1983)">
               <i class="bi bi-heart"></i> Recomendar
             </button>
           </div>
+
         </div>
 
-
         <div class="row mt-4">
-          <!-- Álbum 7: Pappo's Blues Volumen 3 -->
+          <!-- Álbum 7: Locura -->
           <div class="col-md-4 text-center">
-            <img src="https://i.scdn.co/image/ab67616d0000b2733b22594a371efef222af9f46"
-              class="d-block mx-auto img-fluid" alt="pappo_vol3_1973" style="max-height: 200px;">
-            <h3 class="mt-3">Pappo's Blues Volumen 3</h3>
-            <h5>1973</h5>
-            <p><strong>Banda:</strong> Pappo's Blues</p>
+            <img src="https://i.scdn.co/image/ab67616d0000b273292c1ca632a1e120d1208c95"
+              class="d-block mx-auto rounded mx-auto d-block" alt="locura_1985" style="max-height: 200px;">
+            <h3 class="mt-3">Locura</h3>
+            <h5>1985</h5>
+            <p><strong>Banda:</strong> Virus</p>
             <ul class="list-group mb-3">
-              <li class="list-group-item music-item" data-src="audio/SucioyDesprolijo.mp3">3. Sucio y Desprolijo</li>
-              <li class="list-group-item music-item" data-src="audio/SiempreEsLoMismoNena.mp3">9. Siempre Es Lo Mismo
-                Nena.</li>
-              <li class="list-group-item music-item" data-src="audio/PajaroMetalico.mp3">2. Pájaro Metálico</li>
+              <li class="list-group-item music-item" data-src="audio/LunadeMielenlaMano.mp3">5. Luna de Miel en la
+                Mano</li>
+              <li class="list-group-item music-item" data-src="audio/SinDisfraz.mp3">7. Sin Disfraz</li>
+              <li class="list-group-item music-item" data-src="audio/DestinoCircular.mp3">4. Destino Circular</li>
             </ul>
-            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="pappo_vol3_1973">
+            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Locura (1985)">
               <i class="bi bi-heart"></i> Recomendar
             </button>
           </div>
 
-          <!-- Álbum 8: Invisible -->
+          <!-- Álbum 8: Doble Vida -->
           <div class="col-md-4 text-center">
-            <img src="https://i.scdn.co/image/ab67616d0000b273231d1ef9748365f09e4afcb8"
-              class="d-block mx-auto img-fluid" alt="invisible_1974" style="max-height: 200px;">
-            <h3 class="mt-3">Invisible</h3>
-            <h5>1974</h5>
-            <p><strong>Banda:</strong> Invisible</p>
+            <img src="https://i.scdn.co/image/ab67616d0000b2737e553e1367924fa3429a692c"
+              class="d-block mx-auto rounded mx-auto d-block" alt="doble_vida_1988" style="max-height: 200px;">
+            <h3 class="mt-3">Doble Vida</h3>
+            <h5>1988</h5>
+            <p><strong>Banda:</strong> Soda Stereo</p>
             <ul class="list-group mb-3">
-              <li class="list-group-item music-item" data-src="audio/Suspension.mp3">3. Suspensión</li>
-              <li class="list-group-item music-item" data-src="audio/JugodeLucuma.mp3">1. Jugo de Lucuma</li>
-              <li class="list-group-item music-item" data-src="audio/ElDiluvioylaPasajera.mp3">2. El Diluvio y la
-                Pasajera</li>
+              <li class="list-group-item music-item" data-src="audio/EnLaCiudadDeLaFuria.mp3">2. En La Ciudad de la
+                Furia</li>
+              <li class="list-group-item music-item" data-src="audio/LoQueSangra.mp3">3. Lo Que Sangra (La Cúpula)
+              </li>
+              <li class="list-group-item music-item" data-src="audio/CorazonDelator.mp3">7. Corazón Delator</li>
+
+
             </ul>
-            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="invisible_1974">
+            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Doble Vida (1988)">
               <i class="bi bi-heart"></i> Recomendar
             </button>
           </div>
 
-          <!-- Álbum 9: Películas -->
+          <!-- Álbum 9: Piano Bar -->
           <div class="col-md-4 text-center">
-            <img
-              src="https://cdns-images.dzcdn.net/images/cover/049c4a5073814b8c3ce6204789ce710f/0x1900-000000-80-0-0.jpg"
-              class="d-block mx-auto img-fluid" alt="peliculas_1977" style="max-height: 200px;">
-            <h3 class="mt-3">Películas</h3>
-            <h5>1977</h5>
-            <p><strong>Banda:</strong> La Máquina de Hacer Pájaros</p>
+            <img src="https://i.scdn.co/image/ab67616d0000b273a89f53c13537b933a43d2600"
+              class="d-block mx-auto rounded mx-auto d-block" alt="piano_bar_1984" style="max-height: 200px;">
+            <h3 class="mt-3">Piano Bar</h3>
+            <h5>1984</h5>
+            <p><strong>Banda:</strong> Charly García</p>
             <ul class="list-group mb-3">
-              <li class="list-group-item music-item" data-src="audio/Hipercandombe.mp3">5. Hipercandombe</li>
-              <li class="list-group-item music-item" data-src="audio/QueSePuedeHacerSalvoVerPeliculas.mp3">4. Que Se
-                Puede Hacer Salvo Ver Peliculas</li>
-              <li class="list-group-item music-item" data-src="audio/NoTeDejesDesanimar.mp3">3. No Te Dejes Desanimar
+              <li class="list-group-item music-item" data-src="audio/DemoliendoHotele.mp3">1. Demoliendo Hoteles</li>
+              <li class="list-group-item music-item" data-src="audio/PromesasSobreElBidet.mp3">2. Promesas Sobre el
+                Bidet
+              </li>
+              <li class="list-group-item music-item" data-src="audio/RarosPeinadosNuevos.mp3">3. Raros Peinados Nuevos
               </li>
             </ul>
-            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="peliculas_1977">
+            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Piano Bar (1984)">
               <i class="bi bi-heart"></i> Recomendar
             </button>
           </div>
         </div>
 
+        <div class="row mt-4">
+          <!-- Álbum 10: Soda Stereo -->
+          <div class="col-md-4 text-center">
+            <img src="https://sodastereo.com/files/albums/soda-stereo.jpg"
+              class="d-block mx-auto rounded mx-auto d-block" alt="soda_stereo_1984" style="max-height: 200px;">
+            <h3 class="mt-3">Soda Stereo</h3>
+            <h5>1984</h5>
+            <p><strong>Banda:</strong> Soda Stereo</p>
+            <ul class="list-group mb-3">
+              <li class="list-group-item music-item" data-src="audio/TratameSuavemente.mp3">4. Trátame Suavemente</li>
+              <li class="list-group-item music-item" data-src="audio/TeHacenFaltaVitaminas.mp3">3. Te Hacen Falta
+                Vitaminas</li>
+              <li class="list-group-item music-item" data-src="audio/UnMisilEnMiPlacard.mp3">8. Un Misil en mi Placard
+              </li>
 
+            </ul>
+            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Soda Stereo (1984)">
+              <i class="bi bi-heart"></i> Recomendar
+            </button>
+          </div>
+
+          <!-- Álbum 11: Cómo conseguir chicas -->
+          <div class="col-md-4 text-center">
+            <img src="https://www.cmtv.com.ar/tapas-cd/charlycomoconseguirchicas.webp"
+              class="d-block mx-auto rounded mx-auto d-block" alt="como_conseguir_chicas_1989"
+              style="max-height: 200px;">
+            <h3 class="mt-3">Cómo Conseguir Chicas</h3>
+            <h5>1989</h5>
+            <p><strong>Banda:</strong> Charly García</p>
+            <ul class="list-group mb-3">
+              <li class="list-group-item music-item" data-src="audio/Fanky.mp3">3. Fanky</li>
+              <li class="list-group-item music-item" data-src="audio/NoToquen.mp3">1. No Toquen</li>
+              <li class="list-group-item music-item" data-src="audio/Fantasy.mp3">8. Fantasy</li>
+            </ul>
+            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Cómo Conseguir Chicas (1989)">
+              <i class="bi bi-heart"></i> Recomendar
+            </button>
+          </div>
+
+          <!-- Álbum 12: Parte de la religión -->
+          <div class="col-md-4 text-center">
+            <img src="https://i.scdn.co/image/ab67616d0000b273e4aaeab8b89233708ba856b9"
+              class="d-block mx-auto rounded mx-auto d-block" alt="parte_de_la_religion_1987"
+              style="max-height: 200px;">
+            <h3 class="mt-3">Parte de la Religión</h3>
+            <h5>1987</h5>
+            <p><strong>Banda:</strong> Charly García</p>
+            <ul class="list-group mb-3">
+              <li class="list-group-item music-item" data-src="audio/RezoPorVos.mp3">7. Rezo Por Vos</li>
+              <li class="list-group-item music-item" data-src="audio/NoVoyEnTren.mp3">6. No Voy en Tren</li>
+              <li class="list-group-item music-item" data-src="audio/BuscandounSimbolodePaz.mp3">2. Buscando un
+                Símbolo de Paz</li>
+            </ul>
+            <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Parte de la Religión (1987)">
+              <i class="bi bi-heart"></i> Recomendar
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="albumes90">
         <div class="container my-5">
-          <h2 class="text-center mb-4">Álbumes Icónicos de los 80's</h2>
-
-          <div class="row">
-
-            <!-- Álbum 1: Relax -->
-            <div class="col-md-4 text-center">
-              <img src="https://i.scdn.co/image/ab67616d0000b273302374afec1da59ce59da8f0"
-                class="d-block mx-auto img-fluid" alt="relax_1984" style="max-height: 200px;">
-              <h3 class="mt-3">Relax</h3>
-              <h5>1984</h5>
-              <p><strong>Banda:</strong> Virus</p>
-              <ul class="list-group mb-3">
-                <li class="list-group-item music-item" data-src="audio/AmorDescartable.mp3">5. Amor Descartable</li>
-                <li class="list-group-item music-item" data-src="audio/DameUnaSeñal.mp3">7. Dame Una Señal</li>
-                <li class="list-group-item music-item" data-src="audio/JuegosIncompletos.mp3">6. Juegos Incompletos</li>
-              </ul>
-              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="relax_1984">
-                <i class="bi bi-heart"></i> Recomendar
-              </button>
-            </div>
-
-            <!-- Álbum 2: Nada Personal -->
-            <div class="col-md-4 text-center">
-              <img src="https://i.scdn.co/image/ab67616d0000b273e28947f6ad2f100af9c1965a"
-                class="d-block mx-auto img-fluid" alt="nada_personal_1985" style="max-height: 200px;">
-              <h3 class="mt-3">Nada Personal</h3>
-              <h5>1985</h5>
-              <p><strong>Banda:</strong> Soda Stereo</p>
-              <ul class="list-group mb-3">
-                <li class="list-group-item music-item" data-src="audio/CuandoPaseElTemblo.mp3">3. Cuando Pase El Temblo
-                </li>
-                <li class="list-group-item music-item" data-src="audio/NadaPersonal.mp3">1. Nada Personal</li>
-                <li class="list-group-item music-item" data-src="audio/JuegosDeSeduccion.mp3">6. Juegos De Seducción
-                </li>
-
-              </ul>
-              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="nada_personal_1985">
-                <i class="bi bi-heart"></i> Recomendar
-              </button>
-            </div>
-
-            <!-- Álbum 3: Oktubre -->
-            <div class="col-md-4 text-center">
-              <img src="https://i.scdn.co/image/ab67616d0000b273353360f871d689ff74dd3712"
-                class="d-block mx-auto img-fluid" alt="oktubre_1986" style="max-height: 200px;">
-              <h3 class="mt-3">Oktubre</h3>
-              <h5>1986</h5>
-              <p><strong>Banda:</strong> Patricio Rey y sus Redonditos de Ricota</p>
-              <ul class="list-group mb-3">
-                <li class="list-group-item music-item" data-src="audio/PresoEnMiCiudad.mp3">2. Preso En Mi Ciudad</li>
-                <li class="list-group-item music-item" data-src="audio/FuegosDeOktober.mp3">1. Fuegos De Oktober</li>
-                <li class="list-group-item music-item" data-src="audio/JiJiJi.mp3">7. Ji Ji Ji</li>
-              </ul>
-              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="oktubre_1986">
-                <i class="bi bi-heart"></i> Recomendar
-              </button>
-            </div>
-
-          </div>
-
+          <h2 class="text-center mb-4">Álbumes Icónicos de los 90's+</h2>
           <div class="row mt-4">
-            <!-- Álbum 4: Clics Modernos -->
+            <!-- Álbum 1: Canción Animal -->
             <div class="col-md-4 text-center">
-              <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Clics_modernos.jpg"
-                class="d-block mx-auto img-fluid" alt="clics_modernos_1983" style="max-height: 200px;">
-              <h3 class="mt-3">Clics Modernos</h3>
-              <h5>1983</h5>
-              <p><strong>Banda:</strong> Charly García</p>
-              <ul class="list-group mb-3">
-                <li class="list-group-item music-item" data-src="audio/NosSiguenPegandoAbajo.mp3">1. Nos Siguen Pegando
-                  Abajo</li>
-                <li class="list-group-item music-item" data-src="audio/NoMeDejanSalir.mp3">6. No Me Dejan Salir</li>
-                <li class="list-group-item music-item" data-src="audio/LosDinosaurios.mp3">7. Los Dinosaurios</li>
-              </ul>
-              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="clics_modernos_1983">
-                <i class="bi bi-heart"></i> Recomendar
-              </button>
-            </div>
-
-            <!-- Álbum 5: Signos -->
-            <div class="col-md-4 text-center">
-              <img src="https://i.scdn.co/image/ab67616d0000b2734a6f5598c41e77ae78cab725"
-                class="d-block mx-auto img-fluid" alt="signos_1986" style="max-height: 200px;">
-              <h3 class="mt-3">Signos</h3>
-              <h5>1986</h5>
+              <img src="https://i.scdn.co/image/ab67616d0000b273c451ed28353639e79b4d97d9"
+                class="d-block mx-auto rounded mx-auto d-block" alt="cancion_animal_1990" style="max-height: 200px;">
+              <h3 class="mt-3">Canción Animal</h3>
+              <h5>1990</h5>
               <p><strong>Banda:</strong> Soda Stereo</p>
               <ul class="list-group mb-3">
-                <li class="list-group-item music-item" data-src="audio/PersianaAmericana.mp3">5. Persiana Americana</li>
-                <li class="list-group-item music-item" data-src="audio/Signos.mp3">7. Signos</li>
-                <li class="list-group-item music-item" data-src="audio/Profugos.mp3">3. Prófugos</li>
-
+                <li class="list-group-item music-item" data-src="audio/DeMusicaLigera.mp3">6. De Música Ligera</li>
+                <li class="list-group-item music-item" data-src="audio/EntreCanibale.mp3">8. Entre Caníbales</li>
+                <li class="list-group-item music-item" data-src="audio/CancionAnimal.mp3">3. Canción Animal</li>
               </ul>
-              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="signos_1986">
+              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Canción Animal (1990)">
                 <i class="bi bi-heart"></i> Recomendar
               </button>
             </div>
 
-
-            <!-- Álbum 6: Vasos y besos -->
+            <!-- Álbum 2: La Era de la Boludez -->
             <div class="col-md-4 text-center">
-              <img src="https://i.scdn.co/image/ab67616d0000b273b48a6d969c6bb667e24929a5"
-                class="d-block mx-auto img-fluid" alt="vasos_y_besos_1983" style="max-height: 200px;">
-              <h3 class="mt-3">Vasos y besos</h3>
-              <h5>1986</h5>
-              <p><strong>Banda:</strong> Los Abuelos De La Nada</p>
+              <img src="https://i.scdn.co/image/ab67616d0000b2737e09bfe5e78c7fb5cb3d9b68"
+                class="d-block mx-auto rounded mx-auto d-block" alt="la_era_de_la_boludez_1993"
+                style="max-height: 200px;">
+              <h3 class="mt-3">La Era de la Boludez</h3>
+              <h5>1993</h5>
+              <p><strong>Banda:</strong> Divididos</p>
               <ul class="list-group mb-3">
-                <li class="list-group-item music-item" data-src="audio/Milhoras.mp3">8. Mil horas</li>
-                <li class="list-group-item music-item" data-src="audio/LunesPorLaMadrugada.mp3">1. Lunes Por La
-                  Madrugada</li>
-                <li class="list-group-item music-item" data-src="audio/HimnoDeMiCorazon.mp3">6. Himno De Mi Corazón</li>
-
+                <li class="list-group-item music-item" data-src="audio/QueVes.mp3">5. ¿Qué Ves?</li>
+                <li class="list-group-item music-item" data-src="audio/PaisanoDeHurlingham.mp3">9. Paisano De
+                  Hurlingham</li>
+                <li class="list-group-item music-item" data-src="audio/ElArriero.mp3">3. El Arriero</li>
               </ul>
-              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="vasos_y_besos_1983">
+              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="La Era de la Boludez (1993)">
                 <i class="bi bi-heart"></i> Recomendar
               </button>
             </div>
 
-          </div>
-
-          <div class="row mt-4">
-            <!-- Álbum 7: Locura -->
+            <!-- Álbum 3: Alta Suciedad -->
             <div class="col-md-4 text-center">
-              <img src="https://i.scdn.co/image/ab67616d0000b273292c1ca632a1e120d1208c95"
-                class="d-block mx-auto img-fluid" alt="locura_1985" style="max-height: 200px;">
-              <h3 class="mt-3">Locura</h3>
-              <h5>1985</h5>
-              <p><strong>Banda:</strong> Virus</p>
+              <img src="https://i.scdn.co/image/ab67616d0000b273e4b8ec3d2ffe1f77c7185d48"
+                class="d-block mx-auto rounded mx-auto d-block" alt="alta_suciedad_1997" style="max-height: 200px;">
+              <h3 class="mt-3">Alta Suciedad</h3>
+              <h5>1997</h5>
+              <p><strong>Banda:</strong> Andrés Calamaro</p>
               <ul class="list-group mb-3">
-                <li class="list-group-item music-item" data-src="audio/LunadeMielenlaMano.mp3">5. Luna de Miel en la
-                  Mano</li>
-                <li class="list-group-item music-item" data-src="audio/SinDisfraz.mp3">7. Sin Disfraz</li>
-                <li class="list-group-item music-item" data-src="audio/DestinoCircular.mp3">4. Destino Circular</li>
+                <li class="list-group-item music-item" data-src="audio/Flaca.mp3">5. Flaca</li>
+                <li class="list-group-item music-item" data-src="audio/Loco.mp3">4. Loco</li>
+                <li class="list-group-item music-item" data-src="audio/AltaSuciedad.mp3">1. Alta Suciedad</li>
               </ul>
-              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="locura_1985">
-                <i class="bi bi-heart"></i> Recomendar
-              </button>
-            </div>
-
-            <!-- Álbum 8: Doble Vida -->
-            <div class="col-md-4 text-center">
-              <img src="https://i.scdn.co/image/ab67616d0000b2737e553e1367924fa3429a692c"
-                class="d-block mx-auto img-fluid" alt="doble_vida_1988" style="max-height: 200px;">
-              <h3 class="mt-3">Doble Vida</h3>
-              <h5>1988</h5>
-              <p><strong>Banda:</strong> Soda Stereo</p>
-              <ul class="list-group mb-3">
-                <li class="list-group-item music-item" data-src="audio/EnLaCiudadDeLaFuria.mp3">2. En La Ciudad de la
-                  Furia</li>
-                <li class="list-group-item music-item" data-src="audio/LoQueSangra.mp3">3. Lo Que Sangra (La Cúpula)
-                </li>
-                <li class="list-group-item music-item" data-src="audio/CorazonDelator.mp3">7. Corazón Delator</li>
-
-
-              </ul>
-              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="doble_vida_1988">
-                <i class="bi bi-heart"></i> Recomendar
-              </button>
-            </div>
-
-            <!-- Álbum 9: Piano Bar -->
-            <div class="col-md-4 text-center">
-              <img src="https://i.scdn.co/image/ab67616d0000b273a89f53c13537b933a43d2600"
-                class="d-block mx-auto img-fluid" alt="piano_bar_1984" style="max-height: 200px;">
-              <h3 class="mt-3">Piano Bar</h3>
-              <h5>1984</h5>
-              <p><strong>Banda:</strong> Charly García</p>
-              <ul class="list-group mb-3">
-                <li class="list-group-item music-item" data-src="audio/DemoliendoHotele.mp3">1. Demoliendo Hoteles</li>
-                <li class="list-group-item music-item" data-src="audio/PromesasSobreElBidet.mp3">2. Promesas Sobre el
-                  Bidet
-                </li>
-                <li class="list-group-item music-item" data-src="audio/RarosPeinadosNuevos.mp3">3. Raros Peinados Nuevos
-                </li>
-              </ul>
-              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="piano_bar_1984">
+              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Alta Suciedad (1997)">
                 <i class="bi bi-heart"></i> Recomendar
               </button>
             </div>
           </div>
 
           <div class="row mt-4">
-            <!-- Álbum 10: Soda Stereo -->
+            <!-- Álbum 4: Jessico -->
             <div class="col-md-4 text-center">
-              <img src="https://sodastereo.com/files/albums/soda-stereo.jpg" class="d-block mx-auto img-fluid"
-                alt="soda_stereo_1984" style="max-height: 200px;">
-              <h3 class="mt-3">Soda Stereo</h3>
-              <h5>1984</h5>
-              <p><strong>Banda:</strong> Soda Stereo</p>
+              <img
+                src="https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/98/51/85/98518582-a603-50c3-6717-8e18dbcca4c2/dj.bukbslhw.jpg/600x600bf-60.jpg"
+                class="d-block mx-auto rounded mx-auto d-block" alt="jessico_2001" style="max-height: 200px;">
+              <h3 class="mt-3">Jessico</h3>
+              <h5>2001</h5>
+              <p><strong>Banda:</strong> Babasónicos</p>
               <ul class="list-group mb-3">
-                <li class="list-group-item music-item" data-src="audio/TratameSuavemente.mp3">4. Trátame Suavemente</li>
-                <li class="list-group-item music-item" data-src="audio/TeHacenFaltaVitaminas.mp3">3. Te Hacen Falta
-                  Vitaminas</li>
-                <li class="list-group-item music-item" data-src="audio/UnMisilEnMiPlacard.mp3">8. Un Misil en mi Placard
-                </li>
-
+                <li class="list-group-item music-item" data-src="audio/LosCalientes.mp3">1. Los Calientes</li>
+                <li class="list-group-item music-item" data-src="audio/ElLoco.mp3">6. El Loco</li>
+                <li class="list-group-item music-item" data-src="audio/Deléctrico.mp3">3. Deléctrico</li>
               </ul>
-              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="soda_stereo_1984">
+              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Jessico (2001)">
                 <i class="bi bi-heart"></i> Recomendar
               </button>
             </div>
 
-            <!-- Álbum 11: Cómo conseguir chicas -->
+            <!-- Álbum 5: Bocanada -->
             <div class="col-md-4 text-center">
-              <img src="https://www.cmtv.com.ar/tapas-cd/charlycomoconseguirchicas.webp"
-                class="d-block mx-auto img-fluid" alt="como_conseguir_chicas_1989" style="max-height: 200px;">
-              <h3 class="mt-3">Cómo Conseguir Chicas</h3>
-              <h5>1989</h5>
-              <p><strong>Banda:</strong> Charly García</p>
+              <img src="https://i.scdn.co/image/ab67616d0000b2731152471596980e1bba03b6ab"
+                class="d-block mx-auto rounded mx-auto d-block" alt="bocanadas_1999" style="max-height: 200px;">
+              <h3 class="mt-3">Bocanada</h3>
+              <h5>1999</h5>
+              <p><strong>Banda:</strong> Gustavo Cerati</p>
               <ul class="list-group mb-3">
-                <li class="list-group-item music-item" data-src="audio/Fanky.mp3">3. Fanky</li>
-                <li class="list-group-item music-item" data-src="audio/NoToquen.mp3">1. No Toquen</li>
-                <li class="list-group-item music-item" data-src="audio/Fantasy.mp3">8. Fantasy</li>
+                <li class="list-group-item music-item" data-src="audio/Bocanada.mp3">3. Bocanada</li>
+                <li class="list-group-item music-item" data-src="audio/Tabu.mp3">1. Tabu</li>
+                <li class="list-group-item music-item" data-src="audio/Puente.mp3">4. Puente</li>
               </ul>
-              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="como_conseguir_chicas_1989">
+              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="Bocanada (1999)">
                 <i class="bi bi-heart"></i> Recomendar
               </button>
             </div>
-
-            <!-- Álbum 12: Parte de la religión -->
-            <div class="col-md-4 text-center">
-              <img src="https://i.scdn.co/image/ab67616d0000b273e4aaeab8b89233708ba856b9"
-                class="d-block mx-auto img-fluid" alt="parte_de_la_religion_1987" style="max-height: 200px;">
-              <h3 class="mt-3">Parte de la Religión</h3>
-              <h5>1987</h5>
-              <p><strong>Banda:</strong> Charly García</p>
-              <ul class="list-group mb-3">
-                <li class="list-group-item music-item" data-src="audio/RezoPorVos.mp3">7. Rezo Por Vos</li>
-                <li class="list-group-item music-item" data-src="audio/NoVoyEnTren.mp3">6. No Voy en Tren</li>
-                <li class="list-group-item music-item" data-src="audio/BuscandounSimbolodePaz.mp3">2. Buscando un
-                  Símbolo de Paz</li>
-              </ul>
-              <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="parte_de_la_religion_1987">
-                <i class="bi bi-heart"></i> Recomendar
-              </button>
-            </div>
-          </div>
-
-          <div class="container my-5">
-            <h2 class="text-center mb-4">Álbumes Icónicos de los 90's+</h2>
-            <div class="row mt-4">
-              <!-- Álbum 1: Canción Animal -->
-              <div class="col-md-4 text-center">
-                <img src="https://i.scdn.co/image/ab67616d0000b273c451ed28353639e79b4d97d9"
-                  class="d-block mx-auto img-fluid" alt="cancion_animal_1990" style="max-height: 200px;">
-                <h3 class="mt-3">Canción Animal</h3>
-                <h5>1990</h5>
-                <p><strong>Banda:</strong> Soda Stereo</p>
-                <ul class="list-group mb-3">
-                  <li class="list-group-item music-item" data-src="audio/DeMusicaLigera.mp3">6. De Música Ligera</li>
-                  <li class="list-group-item music-item" data-src="audio/EntreCanibale.mp3">8. Entre Caníbales</li>
-                  <li class="list-group-item music-item" data-src="audio/CancionAnimal.mp3">3. Canción Animal</li>
-                </ul>
-                <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="cancion_animal_1990">
-                  <i class="bi bi-heart"></i> Recomendar
-                </button>
-              </div>
-
-              <!-- Álbum 2: La Era de la Boludez -->
-              <div class="col-md-4 text-center">
-                <img src="https://i.scdn.co/image/ab67616d0000b2737e09bfe5e78c7fb5cb3d9b68"
-                  class="d-block mx-auto img-fluid" alt="la_era_de_la_boludez_1993" style="max-height: 200px;">
-                <h3 class="mt-3">La Era de la Boludez</h3>
-                <h5>1993</h5>
-                <p><strong>Banda:</strong> Divididos</p>
-                <ul class="list-group mb-3">
-                  <li class="list-group-item music-item" data-src="audio/QueVes.mp3">5. ¿Qué Ves?</li>
-                  <li class="list-group-item music-item" data-src="audio/PaisanoDeHurlingham.mp3">9. Paisano De
-                    Hurlingham</li>
-                  <li class="list-group-item music-item" data-src="audio/ElArriero.mp3">3. El Arriero</li>
-                </ul>
-                <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="la_era_de_la_boludez_1993">
-                  <i class="bi bi-heart"></i> Recomendar
-                </button>
-              </div>
-
-              <!-- Álbum 3: Alta Suciedad -->
-              <div class="col-md-4 text-center">
-                <img src="https://i.scdn.co/image/ab67616d0000b273e4b8ec3d2ffe1f77c7185d48"
-                  class="d-block mx-auto img-fluid" alt="alta_suciedad_1997" style="max-height: 200px;">
-                <h3 class="mt-3">Alta Suciedad</h3>
-                <h5>1997</h5>
-                <p><strong>Banda:</strong> Andrés Calamaro</p>
-                <ul class="list-group mb-3">
-                  <li class="list-group-item music-item" data-src="audio/Flaca.mp3">5. Flaca</li>
-                  <li class="list-group-item music-item" data-src="audio/Loco.mp3">4. Loco</li>
-                  <li class="list-group-item music-item" data-src="audio/AltaSuciedad.mp3">1. Alta Suciedad</li>
-                </ul>
-                <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="alta_suciedad_1997">
-                  <i class="bi bi-heart"></i> Recomendar
-                </button>
-              </div>
-            </div>
-
-            <div class="row mt-4">
-              <!-- Álbum 4: Jessico -->
-              <div class="col-md-4 text-center">
-                <img
-                  src="https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/98/51/85/98518582-a603-50c3-6717-8e18dbcca4c2/dj.bukbslhw.jpg/600x600bf-60.jpg"
-                  class="d-block mx-auto img-fluid" alt="jessico_2001" style="max-height: 200px;">
-                <h3 class="mt-3">Jessico</h3>
-                <h5>2001</h5>
-                <p><strong>Banda:</strong> Babasónicos</p>
-                <ul class="list-group mb-3">
-                  <li class="list-group-item music-item" data-src="audio/LosCalientes.mp3">1. Los Calientes</li>
-                  <li class="list-group-item music-item" data-src="audio/ElLoco.mp3">6. El Loco</li>
-                  <li class="list-group-item music-item" data-src="audio/Deléctrico.mp3">3. Deléctrico</li>
-                </ul>
-                <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="jessico_2001">
-                  <i class="bi bi-heart"></i> Recomendar
-                </button>
-              </div>
-
-              <!-- Álbum 5: Bocanada -->
-              <div class="col-md-4 text-center">
-                <img src="https://i.scdn.co/image/ab67616d0000b2731152471596980e1bba03b6ab"
-                  class="d-block mx-auto img-fluid" alt="bocanadas_1999" style="max-height: 200px;">
-                <h3 class="mt-3">Bocanada</h3>
-                <h5>1999</h5>
-                <p><strong>Banda:</strong> Gustavo Cerati</p>
-                <ul class="list-group mb-3">
-                  <li class="list-group-item music-item" data-src="audio/Bocanada.mp3">3. Bocanada</li>
-                  <li class="list-group-item music-item" data-src="audio/Tabu.mp3">1. Tabu</li>
-                  <li class="list-group-item music-item" data-src="audio/Puente.mp3">4. Puente</li>
-                </ul>
-                <button class="btn btn-outline-danger btn-sm recommend-btn" data-id="bocanadas_1999">
-                  <i class="bi bi-heart"></i> Recomendar
-                </button>
-              </div>
-            </div>
-
-
           </div>
         </div>
 
-        <!-- Reproductor de audio -->
-        <div class="audio-player text-center mt-4">
-          <audio id="audioPlayer" controls style="width: 100%; max-width: 500px;">
-            <source id="audioSource" src="" type="audio/mpeg">
-            Tu navegador no soporta la reproducción de audio.
-          </audio>
-        </div>
+      </div>
+      </div>
+
+      <!-- Reproductor de audio -->
+      <div class="audio-player text-center mt-4">
+        <audio id="audioPlayer" controls style="width: 100%; max-width: 80%;">
+          <source id="audioSource" src="" type="audio/mpeg">
+          Tu navegador no soporta la reproducción de audio.
+        </audio>
+      </div>
 
     </section>
 
-    <section id="top-albums" class="py-5 bg-secondary text-light">
+    <section id="top-albums" class="py-5 bg-dark text-light">
       <div class="container my-5">
-        <h2 class="text-center mb-4">Top 20 Álbumes</h2>
+        <h2 class="text-center mb-4">Top 20 Álbumes Icónicos</h2>
         <table class="table table-striped table-dark">
           <thead>
             <tr>
@@ -839,10 +879,21 @@
           <div class="col-md-12">
             <label for="inputBand" class="form-label">Banda favorita</label>
             <select id="inputBand" class="form-select" required>
-              <option selected>Elige una banda...</option>
-              <option value="soda">Soda Stereo</option>
-              <option value="redondos">Los Redondos</option>
-              <option value="pericos">Los Pericos</option>
+              <option value="SodaStereo">Soda Stereo</option>
+              <option value="PatricioReyysusRedonditosdeRicota">Patricio Rey y sus Redonditos de Ricota</option>
+              <option value="Virus">Virus</option>
+              <option value="LosAbuelosdelaNada">Los Abuelos de la Nada</option>
+              <option value="CharlyGarcia">Charly García</option>
+              <option value="PapposBlues">Pappo's Blues</option>
+              <option value="PescadoRabioso">Pescado Rabioso</option>
+              <option value="SeruGiran">Serú Girán</option>
+              <option value="LaMaquinadeHacerPajaros">La Máquina de Hacer Pájaros</option>
+              <option value="Divididos">Divididos</option>
+              <option value="Almedra">Almedra</option>
+              <option value="GustavoCerati">Gustavo Cerati</option>
+              <option value="Babasonicos">Babasónicos</option>
+              <option value="LuisAlbertoSpinetta">Luis Alberto Spinetta</option>
+              <option value="AndresCalamaro">Andrés Calamaro</option>
             </select>
           </div>
           <div class="col-12">
@@ -853,13 +904,30 @@
       </div>
     </section>
 
-    <!-- Interacción -->
-    <section id="interaction" class="py-5">
-      <div class="container">
-        <h2 class="text-center">Tu conexión con el rock</h2>
-        <ul id="submittedData" class="list-group"></ul>
+    <footer class="footer-section">
+      <div class="container relative">
+
+        <div class="border-top copyright">
+          <div class="row pt-4">
+            <div class="col-lg-6">
+              <p class="mb-2 text-center text-lg-start">Copyright ©
+                <script>document.write(new Date().getFullYear());</script>. Todos los Derechos Reservados. — Peter
+                Miranda
+              </p>
+            </div>
+
+            <div class="col-lg-6 text-center text-lg-end">
+              <ul class="list-unstyled d-inline-flex ms-auto">
+                <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
       </div>
-    </section>
+    </footer>
   </main>
 
 
