@@ -31,11 +31,11 @@ h2 {
 }
 
 
-#intro{
+#intro {
     width: 100%;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://scontent.fgye1-1.fna.fbcdn.net/v/t1.6435-9/109710271_740868853402959_465496511126255870_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFOurBrsO0CxPrlsQxk52hFZlxC22RhWfhmXELbZGFZ-D6nqnq_FKdS0MMYG9jS_4rxfGhgtbin-PYGvymkUzxE&_nc_ohc=W35PnQap9zQQ7kNvgHsoyVB&_nc_zt=23&_nc_ht=scontent.fgye1-1.fna&_nc_gid=AQ4Q2m9i8TjoZw1JbB6u0RU&oh=00_AYAhOiseepyd6peH--asyiq2Ch-XrRIxC3J2o07Q9eMwQQ&oe=6763CAA9);
     background-repeat: repeat;
-    background-position:center;
+    background-position: center;
     background-size: contain;
 
     height: 600px;
