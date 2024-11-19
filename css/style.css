@@ -1,44 +1,176 @@
-  body {
-      font-family: 'Arial', sans-serif;
-      color: #333;
-  }
+:root {
+    --primary-100: #0085ff;
+    --primary-200: #69b4ff;
+    --primary-300: #e0ffff;
+    --accent-100: #006fff;
+    --accent-200: #e1ffff;
+    --text-100: #FFFFFF;
+    --text-200: #9e9e9e;
+    --bg-100: #1E1E1E;
+    --bg-200: #2d2d2d;
+    --bg-300: #454545;
+}
 
-  .navbar-brand {
-      font-weight: bold;
-      font-size: 1.5rem;
-  }
+body,
+html {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
 
-  h1,
-  h2,
-  h3 {
-      font-weight: bold;
-  }
-
-  .bg-dark {
-      background-color: #1a1a1a !important;
-  }
-
-  .img-fluid {
-      max-height: 200px;
-  }
-
-  .carousel-item img {
-      max-height: 200px;
-      object-fit: contain;
-  }
-
-  h3 {
-      font-size: 1.5rem;
-      font-weight: bold;
-  }
-
-  .btn-outline-danger {
-      margin-top: 10px;
-  }
-
-
-  .music-item.active {
-    background-color: #f8d7da;
-    color: #721c24;
+h1 {
     font-weight: bold;
-  }
+}
+
+h2 {
+    font-weight: bold;
+    padding-bottom: 25px;
+}
+
+.bg-dark {
+    background-color: #1E1E1E !important;
+}
+
+
+#intro{
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://scontent.fgye1-1.fna.fbcdn.net/v/t1.6435-9/109710271_740868853402959_465496511126255870_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFOurBrsO0CxPrlsQxk52hFZlxC22RhWfhmXELbZGFZ-D6nqnq_FKdS0MMYG9jS_4rxfGhgtbin-PYGvymkUzxE&_nc_ohc=W35PnQap9zQQ7kNvgHsoyVB&_nc_zt=23&_nc_ht=scontent.fgye1-1.fna&_nc_gid=AQ4Q2m9i8TjoZw1JbB6u0RU&oh=00_AYAhOiseepyd6peH--asyiq2Ch-XrRIxC3J2o07Q9eMwQQ&oe=6763CAA9);
+    background-repeat: repeat;
+    background-position:center;
+    background-size: contain;
+
+    height: 600px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+
+
+.custom-button {
+    background-color: transparent;
+    border-radius: 25px;
+    border: 3px solid;
+    border-color: #007bff;
+    color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.img-fluid {
+    max-height: 200px;
+}
+
+.carousel-item img {
+    max-height: 200px;
+    object-fit: contain;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#bandsCarousel img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#bandsCarousel img:hover {
+    opacity: 0.5;
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+#albums-60-70 li:hover {
+    cursor: pointer;
+    background-color: #006fff;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.music-item.active {
+    background-color: #0085ff;
+    font-weight: bold;
+}
+
+button {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.btn-outline-danger {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+button.btn-success {
+    margin-top: 10px;
+    background-color: #28a745 !important;
+    color: #fff !important;
+    border-color: #28a745 !important;
+}
+
+
+.carousel-control-prev {
+    left: -45px;
+}
+
+.carousel-control-next {
+    right: -45px;
+}
+
+
+.audio-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #201e1e;
+    padding: 10px 0;
+    z-index: 2;
+    display: none;
+}
+
+.audio-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #201e1e;
+    padding: 10px 0;
+    z-index: 2;
+    display: none;
+}
+
+section #albums-60-70:hover .audio-player {
+    display: block;
+}

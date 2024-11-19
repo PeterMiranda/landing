@@ -1,6 +1,6 @@
 const databaseURL = "https://landing-fc926-default-rtdb.firebaseio.com/votes.json";
 const databaseAlbumsURL = "https://landing-fc926-default-rtdb.firebaseio.com/votesAlbums.json";
-const dataRegistroURL = ""
+const databaseRegistroURL = "https://landing-fc926-default-rtdb.firebaseio.com/data.json";
 
 
 //------------------------- VOTOS DE BANDAS ---------------------------
@@ -60,7 +60,93 @@ const sendAlbumVote = async (albumId) => {
     }
 };
 
+const Registrar = async (bandId) => {
+    // Objeto de datos a enviar
+    const voteData = {
+        bandId: bandId,
+        voteTime: new Date().toLocaleString('es-CO', { timeZone: 'America/Guayaquil' }),
+    };
 
+    try {
+        // Enviar los datos a Firebase
+        const response = await fetch(databaseURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(voteData), // Convertir el objeto a JSON
+        });
+
+        // Verificar si la solicitud fue exitosa
+        if (!response.ok) {
+            throw new Error("Error al enviar el voto.");
+        }
+
+        console.log(`Voto registrado para ${bandId}`);
+        alert("¡Gracias por tu voto!");
+
+    } catch (error) {
+        console.error("Error al registrar el voto:", error);
+        alert("Hubo un problema al registrar tu voto. Intenta más tarde.");
+    }
+};
+
+//------------------------- REGISTROS ---------------------------
+
+const registrarFormulario = async () => {
+    const form = document.getElementById("rockForm");
+    const responseMessage = document.getElementById("responseMessage");
+
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault(); // Evitar el envío por defecto del formulario
+
+        // Obtener los valores del formulario
+        const name = document.getElementById("inputName").value.trim();
+        const email = document.getElementById("inputEmail").value.trim();
+        const favoriteBand = document.getElementById("inputBand").value;
+
+        // Crear el objeto de datos
+        const formData = {
+            name,
+            email,
+            favoriteBand,
+            joinTime: new Date().toLocaleString("es-CO", { timeZone: "America/Guayaquil" }),
+        };
+
+        try {
+            // Enviar los datos a Firebase
+            const response = await fetch(databaseRegistroURL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            // Verificar si la solicitud fue exitosa
+            if (!response.ok) throw new Error("Error al enviar los datos del formulario.");
+
+            console.log("Formulario registrado:", formData);
+            responseMessage.innerHTML = `
+                <div class="alert alert-success">
+                    ¡Gracias, ${name}! Te has unido a nuestra comunidad exitosamente.
+                </div>`;
+            form.reset(); // Limpiar el formulario
+        } catch (error) {
+            console.error("Error al registrar el formulario:", error);
+            responseMessage.innerHTML = `
+                <div class="alert alert-danger">
+                    Hubo un problema al unirte a la comunidad. Intenta más tarde.
+                </div>`;
+        }
+    });
+};
+
+// Llamar a la función al cargar el DOM
+document.addEventListener("DOMContentLoaded", registrarFormulario);
+
+
+//------------------------- CARGAR/ACTUALIZAR DE BANDAS ---------------------------
 
 const updateTopBands = async () => {
     try {
@@ -115,7 +201,7 @@ const updateTopBands = async () => {
     }
 };
 
-
+//------------------------- CARGAR/ACTUALIZAR DE ALBUMNES ---------------------------
 
 const updateTopAlbums = async () => {
     try {
@@ -189,6 +275,12 @@ const ready = () => {
             console.log(`Band ID capturado: ${bandId}`);
 
             sendVote(bandId);
+
+            // Deshabilitar el botón click
+            button.disabled = true;
+            button.textContent = "✔  Recomendado";
+            button.classList.add("btn-success"); // Boton éxito
+            button.classList.remove("btn-outline-danger"); // Quitar original
         });
     });
 
@@ -202,62 +294,24 @@ const ready = () => {
             console.log(`Band ID capturado: ${albumId}`);
 
             sendAlbumVote(albumId);
+
+            // Deshabilitar el botón click
+            button.disabled = true;
+            button.textContent = "✔  Recomendado";
+            button.classList.add("btn-success"); // Boton éxito
+            button.classList.remove("btn-outline-danger"); // Quitar original
         });
     });
 
 };
 
 
-// Llamar a la función para actualizar el Top 5 cuando el DOM esté listo
-document.addEventListener("DOMContentLoaded", () => {
-    updateTopBands();
-    updateTopAlbums();
-
-    // Actualizar el Top 5 periódicamente (opcional)
-    setInterval(updateTopBands, 30000); // Cada 30 segundos
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Confirmar que todos los recursos están cargados
 const loaded = () => {
     console.log("Todos los recursos están cargados.");
+
+    updateTopBands();
+    updateTopAlbums();
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Eventos DOMContentLoaded y load
@@ -266,13 +320,9 @@ window.addEventListener("load", loaded);
 
 
 
+//--------------------- REPRODUCTOR MUSICAL ---------------------------
 
-
-
-
-//////////////// REPRODUCOT MUSICAL ////////////////
-
-// Obtener el reproductor de audio y su fuente
+// Reproductor de audio y su fuente
 const audioPlayer = document.getElementById("audioPlayer");
 const audioSource = document.getElementById("audioSource");
 
@@ -284,10 +334,10 @@ document.querySelectorAll(".music-item").forEach((item) => {
         console.log(`chola ${audioSrc}`);
 
         if (audioSrc) {
-            // Cambiar la fuente del audio y reproducir
+            // Cambia fuente audio y reproducir
             audioSource.src = audioSrc;
-            audioPlayer.load(); // Carga el nuevo audio
-            audioPlayer.play(); // Reproduce el audio
+            audioPlayer.load(); // Carga
+            audioPlayer.play(); // Reproduce
 
             // Resaltar la canción activa
             document.querySelectorAll(".music-item").forEach((el) => {
@@ -300,4 +350,16 @@ document.querySelectorAll(".music-item").forEach((item) => {
             console.error("La canción no tiene un archivo de audio asociado.");
         }
     });
+});
+
+document.addEventListener("scroll", () => {
+    const audioPlayer = document.querySelector(".audio-player");
+    const musicSection = document.querySelector("#albums-60-70");
+    const rect = musicSection.getBoundingClientRect();
+
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        audioPlayer.style.display = "block";
+    } else {
+        audioPlayer.style.display = "none";
+    }
 });
