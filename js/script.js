@@ -322,16 +322,20 @@ window.addEventListener("load", loaded);
 
 //--------------------- REPRODUCTOR MUSICAL ---------------------------
 
-// Reproductor de audio y su fuente
+// fuentes del reproductor
 const audioPlayer = document.getElementById("audioPlayer");
 const audioSource = document.getElementById("audioSource");
+const trackTitle = document.getElementById("trackTitle");
+const trackImage = document.getElementById("trackImage");
+const trackYear = document.getElementById("trackImage");
+const trackBand = document.getElementById("trackImage");
 
-// Agregar eventos a las canciones
+// for cancion a eventos de canciones
 document.querySelectorAll(".music-item").forEach((item) => {
     item.addEventListener("click", () => {
         // Verificar si el atributo data-src existe
         const audioSrc = item.getAttribute("data-src");
-        console.log(`chola ${audioSrc}`);
+        const trackName = item.textContent.trim();
 
         if (audioSrc) {
             // Cambia fuente audio y reproducir
@@ -344,6 +348,20 @@ document.querySelectorAll(".music-item").forEach((item) => {
                 el.classList.remove("active");
             });
             item.classList.add("active");
+
+            // Obtener y actualizar la imagen asociada
+            const section = item.closest(".col-md-4"); //contenedor + cercano
+            const imageElement = section.querySelector("img");
+            const imageUrl = imageElement.getAttribute("src"); //get src
+            trackImage.src = imageUrl;
+
+            //geteador de año
+            const yearText = section.querySelector("h5").textContent.trim();
+
+            //geteador de año
+            const trackBand = section.querySelector("h3").textContent.trim();
+
+            trackTitle.textContent = `${trackName} (${yearText}) - ${trackBand}`;
 
             console.log(`Reproduciendo: ${audioSrc}`);
         } else {

@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aguante Rock!</title>
+  <link rel="icon" href="img/ico.png" type="image/png">
+  <title>AguanteRock!</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
@@ -15,7 +16,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand fs-1">Aguante Rock!</a>
+      <a class="navbar-brand fs-1">AguanteRock!</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,7 +39,7 @@
       <div class="containerbg">
         <div class="container">
           <h1 class="fs-1">Bienvenido a AguanteRock!</h1>
-          <p class="fs-3 fw-lighter">Sitio cultural musical</p>
+          <p class="fs-3 fw-lighter">Sitio de apreciación musical</p>
 
           <p class="fs-4 fw-lighte">Descubre las bandas que marcaron una década inolvidable en la música argentina.</p>
           <br>
@@ -661,7 +662,7 @@
             <h5>1984</h5>
             <p><strong>Banda:</strong> Charly García</p>
             <ul class="list-group mb-3">
-              <li class="list-group-item music-item" data-src="audio/DemoliendoHotele.mp3">1. Demoliendo Hoteles</li>
+              <li class="list-group-item music-item" data-src="audio/DemoliendoHoteles.mp3">1. Demoliendo Hoteles</li>
               <li class="list-group-item music-item" data-src="audio/PromesasSobreElBidet.mp3">2. Promesas Sobre el
                 Bidet
               </li>
@@ -836,10 +837,19 @@
 
       <!-- Reproductor de audio -->
       <div class="audio-player text-center mt-4">
-        <audio id="audioPlayer" controls style="width: 100%; max-width: 80%;">
-          <source id="audioSource" src="" type="audio/mpeg">
-          Tu navegador no soporta la reproducción de audio.
-        </audio>
+        <div id="containerplayer">
+          <div id="a">
+            <img id="trackImage" src="https://www.elliottcarter.com/site/assets/files/2844/00.458x0.png" alt="Carátula"
+              style="width: 100px; height: 100px; border-radius: 3px;">
+          </div>
+          <h3 id="trackTitle">Selecciona una canción para reproducir</h3>
+          <div id="c">
+            <audio id="audioPlayer" controls style="width: 100%; max-width: 95%; margin-right: 100%;">
+              <source id="audioSource" src="" type="audio/mpeg">
+              Tu navegador no soporta la reproducción de audio.
+            </audio>
+          </div>
+        </div>
       </div>
 
     </section>
