@@ -1,0 +1,44 @@
+  body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+  }
+
+  .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+      font-weight: bold;
+  }
+
+  .bg-dark {
+      background-color: #1a1a1a !important;
+  }
+
+  .img-fluid {
+      max-height: 200px;
+  }
+
+  .carousel-item img {
+      max-height: 200px;
+      object-fit: contain;
+  }
+
+  h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+  }
+
+  .btn-outline-danger {
+      margin-top: 10px;
+  }
+
+
+  .music-item.active {
+    background-color: #f8d7da;
+    color: #721c24;
+    font-weight: bold;
+  }
